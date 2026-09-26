@@ -1,0 +1,251 @@
+
+:root{--bg:#F6F7F9;--black:#0B1220;--gray:#6B7280;--border:#E5E7EB;--blue-light:#EFF6FF;--red:#DC2626;}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:Inter,sans-serif;background:var(--bg);color:var(--black);line-height:1.5;}
+a{color:inherit;text-decoration:none;}
+button{cursor:pointer;border:0;background:none;font:inherit;}
+img{max-width:100%;display:block;}
+.topbar{background:var(--black);color:white;height:40px;font-size:12px;display:flex;align-items:center;}
+.topbar .wrap{max-width:1280px;margin:0 auto;padding:0 20px;width:100%;display:flex;justify-content:space-between;}
+.dot{width:8px;height:8px;background:var(--red);border-radius:50%;display:inline-block;}
+.header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,0.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+.header .wrap{max-width:1280px;margin:0 auto;padding:0 20px;height:72px;display:flex;align-items:center;justify-content:space-between;}
+.logo{display:flex;align-items:center;gap:12px;}
+.logo-icon{width:40px;height:40px;background:var(--black);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;}
+.logo strong{font-size:15px;display:block;}
+.logo span{font-size:10px;letter-spacing:0.14em;color:var(--gray);text-transform:uppercase;}
+.nav{display:none;gap:32px;font-size:14px;color:var(--gray);}
+.header-cta{display:none;}
+@media(min-width:1024px){.nav{display:flex;}.burger{display:none;}.header-cta{display:inline-flex;align-items:center;justify-content:center;}}
+.btn-black{height:40px;padding:0 20px;border-radius:999px;background:var(--black);color:white;font-weight:500;white-space:nowrap;}
+.btn-black.big{height:48px;padding:0 28px;}
+.btn-white{height:48px;padding:0 28px;border-radius:999px;background:white;border:1px solid var(--border);font-weight:500;white-space:nowrap;}
+.btn-red{height:44px;padding:0 20px;border-radius:999px;background:#FEF2F2;border:1px solid #FECACA;color:var(--red);font-weight:500;display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;}
+.burger{width:40px;height:40px;border-radius:50%;background:#F3F4F6;}
+.mobile-menu{display:none;background:white;border-top:1px solid var(--border);padding:20px;}
+.mobile-menu.open{display:block;}
+.main{max-width:1280px;margin:0 auto;background:white;}
+@media(min-width:768px){.main{margin:24px auto;border-radius:32px;box-shadow:0 20px 80px -24px rgba(0,0,0,0.15);overflow:hidden;}}
+.hero{padding:40px 20px;display:grid;gap:40px;}
+@media(min-width:1024px){.hero{grid-template-columns:1fr 1fr;padding:56px 40px;}}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;background:#F1F5F9;border:1px solid var(--border);font-size:11px;font-weight:600;text-transform:uppercase;}
+.hero h1{margin-top:24px;font-size:36px;font-weight:800;line-height:0.95;}
+.hero h1 span{color:#9CA3AF;}
+@media(min-width:768px){.hero h1{font-size:54px;}}
+.hero p{margin-top:20px;color:var(--gray);font-size:17px;max-width:52ch;}
+.hero-btns{margin-top:32px;display:flex;gap:12px;flex-wrap:wrap;}
+.hero-img{border-radius:32px;overflow:hidden;aspect-ratio:4/3;background:#F3F4F6;position:relative;}
+.hero-img img,.about-img img{width:100%;height:100%;object-fit:cover;display:block;}
+.float-card{position:absolute;bottom:-20px;left:16px;background:white;border-radius:16px;padding:16px;display:flex;gap:12px;box-shadow:0 16px 40px -12px rgba(0,0,0,0.25);border:1px solid var(--border);}
+.float-card.notdienst-fixed{
+  position:fixed;
+  bottom:20px;
+  left:20px;
+  z-index:60;
+  box-shadow:0 16px 40px -12px rgba(0,0,0,0.35);
+}
+@media(max-width:640px){
+  .float-card.notdienst-fixed{bottom:14px;left:14px;padding:12px;}
+}
+.services{padding:56px 20px;background:var(--bg);}
+.head{display:flex;flex-direction:column;gap:16px;margin-bottom:40px;}
+@media(min-width:768px){.head{flex-direction:row;justify-content:space-between;align-items:flex-end;}}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#9CA3AF;}
+.grid-3{display:grid;gap:20px;}
+@media(min-width:768px){.grid-3{grid-template-columns:1fr 1fr;}}
+@media(min-width:1024px){.grid-3{grid-template-columns:1fr 1fr 1fr;}}
+.card{background:white;border-radius:24px;border:1px solid #F3F4F6;padding:24px;transition:0.3s;}
+.card:hover{transform:translateY(-4px);box-shadow:0 20px 40px -16px rgba(0,0,0,0.15);}
+.card-icon{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;}
+.about{padding:56px 20px;display:grid;gap:40px;}
+@media(min-width:1024px){.about{grid-template-columns:1fr 1fr;padding:80px 40px;}}
+.about-img{border-radius:24px;overflow:hidden;aspect-ratio:4/3;background:#F3F4F6;}
+.cta{margin:24px 20px;background:var(--blue-light);border:1px solid #DBEAFE;border-radius:32px;padding:32px 24px;display:flex;flex-direction:column;gap:24px;}
+@media(min-width:1024px){.cta{flex-direction:row;justify-content:space-between;align-items:center;margin:24px 40px;padding:40px;}}
+.contact{padding:56px 20px;background:var(--bg);display:grid;gap:32px;}
+@media(min-width:1024px){.contact{grid-template-columns:1.1fr 0.9fr;padding:80px 40px;}}
+.form-card,.info-card{border-radius:24px;padding:28px;}
+.form-card{background:white;border:1px solid var(--border);}
+.info-card{background:var(--black);color:white;}
+
+/* Notdienst-Pille (Kontaktkarte) */
+.notdienst-pill{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  text-decoration:none;
+  background:linear-gradient(135deg,#7f1d1d,#450a0a);
+  border:1px solid rgba(248,113,113,0.35);
+  border-radius:999px;
+  padding:12px 22px 12px 12px;
+  transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.notdienst-pill:hover{
+  transform:translateY(-2px);
+  box-shadow:0 14px 28px -10px rgba(239,68,68,0.55);
+  border-color:rgba(248,113,113,0.6);
+}
+.notdienst-pill:active{transform:translateY(0);}
+
+.pill-icon{
+  position:relative;
+  width:44px;
+  height:44px;
+  min-width:44px;
+  border-radius:50%;
+  background:rgba(239,68,68,0.25);
+  color:#f87171;
+  font-size:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.pill-icon::before,
+.pill-icon::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:50%;
+  border:2px solid rgba(248,113,113,0.6);
+  animation:ringPulse 2.4s ease-out infinite;
+}
+.pill-icon::after{
+  animation-delay:1.2s;
+}
+@keyframes ringPulse{
+  0%{transform:scale(1);opacity:.8;}
+  100%{transform:scale(2);opacity:0;}
+}
+
+.pill-text{display:flex;flex-direction:column;}
+.pill-label{font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:#fca5a5;font-weight:600;}
+.pill-number{font-size:18px;font-weight:700;color:white;}
+.pill-sub{font-size:12px;color:rgba(255,255,255,0.6);margin-top:2px;}
+.input{height:44px;width:100%;padding:0 16px;border-radius:999px;border:1px solid var(--border);background:#F9FAFB;}
+.textarea{width:100%;padding:12px 16px;border-radius:16px;border:1px solid var(--border);background:#F9FAFB;}
+.footer{background:var(--black);color:white;padding:48px 20px;}
+.footer-grid{max-width:1280px;margin:0 auto;display:grid;gap:32px;}
+@media(min-width:768px){.footer-grid{grid-template-columns:1fr 1fr 1fr;}}
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.6);backdrop-filter:blur(8px);z-index:50;display:none;align-items:center;justify-content:center;padding:16px;}
+.modal-overlay.open{display:flex;}
+.modal{background:white;border-radius:28px;max-width:560px;width:100%;max-height:90vh;overflow:auto;}
+.modal-head{position:sticky;top:0;background:white;border-bottom:1px solid var(--border);padding:24px;display:flex;justify-content:space-between;gap:16px;}
+.modal-body{padding:24px;}
+
+
+/* ICONS */
+.card-icon{width:48px;height:48px;border-radius:15px;display:flex;align-items:center;justify-content:center;font-size:22px;}
+.icon-heizung{background:#FEF3C7;color:#D97706;}
+.icon-klima{background:#DBEAFE;color:#2563EB;}
+.icon-sanitaer{background:#E0E7FF;color:#4F46E5;}
+.icon-bau{background:#F1F5F9;color:#0B1220;}
+.icon-leck{background:#F0FDF4;color:#16A34A;}
+.icon-schimmel{background:#FEF2F2;color:#DC2626;}
+.modal-icon{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;}
+.modal-icon.icon-heizung{background:#FEF3C7;color:#D97706;}
+.modal-icon.icon-klima{background:#DBEAFE;color:#2563EB;}
+.modal-icon.icon-sanitaer{background:#E0E7FF;color:#4F46E5;}
+.modal-icon.icon-bau{background:#F1F5F9;color:#0B1220;}
+.modal-icon.icon-leck{background:#F0FDF4;color:#16A34A;}
+.modal-icon.icon-schimmel{background:#FEF2F2;color:#DC2626;}
+
+.card-icon svg{width:18px;height:18px;display:block;}
+.modal-icon svg{width:22px;height:22px;display:block;}
+
+.bg-yellow{background:#FEF3C7;color:#D97706;}
+.bg-blue{background:#DBEAFE;color:#2563EB;}
+.bg-purple{background:#E0E7FF;color:#4F46E5;}
+.bg-gray{background:#F1F5F9;color:#0B1220;}
+.bg-green{background:#F0FDF4;color:#16A34A;}
+.bg-red{background:#FEF2F2;color:#DC2626;}
+.card-icon svg{width:18px;height:18px;display:block;}
+.modal-icon svg{width:22px;height:22px;display:block;}
+
+/* Why Section */
+:root{
+  --accent:#2e7d32;
+  --accent-bg:#e8f5e9;
+}
+
+.why{
+  background:white;
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+  display:flex;
+  gap:32px;
+  max-width:1100px;
+  margin:0 auto;
+  flex-wrap:wrap;
+  padding:48px 20px;
+}
+@media(min-width:768px){.why{padding:64px 40px;}}
+
+.why-item{
+  flex:1 1 260px;
+  display:flex;
+  flex-direction:row;
+  align-items:flex-start;
+  gap:16px;
+}
+.why-icon{
+  width:44px;
+  height:44px;
+  min-width:44px;
+  border-radius:50%;
+  background:var(--accent-bg);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transform:scale(0);
+}
+/* Animation läuft nur, wenn .in-view gesetzt ist (per JS beim Scrollen) */
+.why-item.in-view .why-icon{
+  animation:popIn .5s cubic-bezier(.34,1.56,.64,1) forwards;
+}
+
+@keyframes popIn{
+  to{transform:scale(1);}
+}
+
+.why-icon svg{
+  width:22px;
+  height:22px;
+}
+.why-icon path{
+  fill:none;
+  stroke:var(--accent);
+  stroke-width:3.5;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-dasharray:30;
+  stroke-dashoffset:30;
+}
+.why-item.in-view .why-icon path{
+  animation:draw .35s ease forwards;
+  animation-delay:.25s;
+}
+
+@keyframes draw{
+  to{stroke-dashoffset:0;}
+}
+
+.why-item b{
+  font-size:17px;
+  margin-bottom:6px;
+  display:block;
+}
+.why-item p{
+  margin:0;
+  color:#555;
+  line-height:1.5;
+  font-size:14.5px;
+}
+
+.why-icon:hover{
+  animation: pulse 1.2s ease-in-out infinite;
+}
+@keyframes pulse{
+  0%,100%{box-shadow:0 0 0 0 rgba(46,125,50,.35);}
+  50%{box-shadow:0 0 0 10px rgba(46,125,50,0);}
+}
